@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marwa ❤️</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #ffe6e9;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      text-align: center;
+    }
+    h1 {
+      color: #d63384;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      padding: 0 15px;
+    }
+    .buttons {
+      display: flex;
+      gap: 20px;
+      position: relative;
+    }
+    button {
+      padding: 12px 28px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #yesBtn {
+      background-color: #4CAF50;
+      color: white;
+    }
+    #noBtn {
+      background-color: #f44336;
+      color: white;
+      position: absolute;
+      left: 110px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="question">Marwa,do youuu loveee myy? ❤️</h1>
+
+  <div class="buttons">
+    <button id="yesBtn" onclick="accept()">Yes</button>
+    <button id="noBtn" onmouseover="moveButton()">No</button>
+  </div>
+
+  <script>
+    function accept() {
+      document.body.innerHTML = "<h1 style='color: #d63384; font-size: 2.5rem;'>Yepppie! See you soon! ❤️✨</h1>";
+    }
+
+    function moveButton() {
+      const x = Math.random() * (window.innerWidth - 120);
+      const y = Math.random() * (window.innerHeight - 60);
+      const noBtn = document.getElementById("noBtn");
+      noBtn.style.position = "fixed";
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+  </script>
+</body>
+</html>
